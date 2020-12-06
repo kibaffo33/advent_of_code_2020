@@ -1,5 +1,5 @@
 import data
-import aoc_01, aoc_02, aoc_03
+import aoc_01, aoc_02, aoc_03, aoc_04
 
 
 def test_aoc_01_part_one():
@@ -72,3 +72,48 @@ def test_aoc_03_part_two():
 
     # THEN result is correct
     assert result == 3584591857
+
+
+def test_aoc_04_part_one():
+
+    # GIVEN input data
+    # WHEN calling part_one()
+    result = aoc_04.part_one()
+
+    # THEN result is correct
+    assert result == 219
+
+
+def test_aoc_04_part_two():
+
+    # GIVEN input data
+    # WHEN calling part_two()
+    result = aoc_04.part_two()
+
+    # THEN result is correct
+    assert isinstance(result, int)
+
+
+
+
+def test_aoc_04_part_one():
+
+    # GIVEN input data
+    # WHEN calling part_one()
+    result = aoc_04.part_one()
+
+    # THEN result is correct
+    assert result == 219
+
+
+
+def test_aoc_04_part_two():
+
+    # GIVEN input data
+    # WHEN calling part_two()
+    result = aoc_04.part_two()
+
+    # THEN result is correct
+    assert result == 127
+
+

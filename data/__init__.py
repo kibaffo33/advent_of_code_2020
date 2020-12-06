@@ -6,7 +6,7 @@ def load_lines(filename: str):
     return lines
 
 
-def load_data():
+def load_data(filename: str):
     with open(filename, "r") as file:
         data = file.read()
     return data
