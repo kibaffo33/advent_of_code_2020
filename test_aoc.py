@@ -115,3 +115,15 @@ def test_aoc_05_part_one():
     # THEN result is correct
     assert result == 842
 
+
+def test_aoc_05_part_two():
+
+    # GIVEN input data
+    input_data = data.load_lines("data/day05.txt")
+
+    # WHEN calling part_two()
+    result = aoc_05.part_two(input_data)
+
+    # THEN result is correct
+    assert result == 617
+

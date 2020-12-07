@@ -42,15 +42,34 @@ def part_one(input_data):
     return highest
 
 
+def part_two(input_data):
+    taken_seats = list(map(lambda x: get_seat(x), input_data))
+    taken_seats.sort()
+
+    possible_seats = list(map(lambda x: f"{x:02o}", range(128 * 8)))
+    possible_seats = list(map(lambda x: (int(x[:-1]), int(x[-1])), possible_seats))
+    while possible_seats[0] < taken_seats[0]:
+        possible_seats.pop(0)
+    while possible_seats[-1] > taken_seats[-1]:
+        possible_seats.pop(-1)
+
+    result = None
+    possible_results = list(filter(lambda x: x not in taken_seats, possible_seats))
+    assert len(possible_results) == 1
+    row, col = possible_results[0]
+    result = row * 8 + col
+    print(result)
+    return result
+
+
 if __name__ == "__main__":
 
     input_data = data.load_lines("data/day05.txt")
-    print(input_data)
     
     print("==== Part 1 ====")
     part_one(input_data)
 
-    #print("==== Part 2 ====")
-    #part_two(input_data)
+    print("==== Part 2 ====")
+    part_two(input_data)
 
 
