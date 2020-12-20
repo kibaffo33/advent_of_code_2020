@@ -1,5 +1,5 @@
 import data
-import aoc_01, aoc_02, aoc_03, aoc_04, aoc_05, aoc_06, aoc_07
+import aoc_01, aoc_02, aoc_03, aoc_04, aoc_05, aoc_06, aoc_07, aoc_08
 
 
 """Day 01"""
@@ -156,7 +156,7 @@ def test_aoc_06_part_two():
 
 """Day 07"""
 
-def test_aoc_07():
+def test_aoc_07_part_one():
 
     # GIVEN input data
     input_data = "data/day07.txt"
@@ -168,7 +168,7 @@ def test_aoc_07():
     assert result == 226
 
 
-def test_aoc_07():
+def test_aoc_07_part_two():
 
     # GIVEN input data
     input_data = "data/day07.txt"
@@ -178,4 +178,30 @@ def test_aoc_07():
 
     # THEN result is correct
     assert result == 9569
+
+
+"""Day 08"""
+
+def test_aoc_08_part_one():
+
+    # GIVEN input data
+    input_data = "data/day08.txt"
+
+    # WHEN calling part_one()
+    result = aoc_08.part_one(input_data)
+
+    # THEN result is correct
+    assert result == 1317
+
+
+def test_aoc_08_part_two():
+
+    # GIVEN input data
+    input_data = "data/day08.txt"
+
+    # WHEN calling part_two()
+    result = aoc_08.part_two(input_data)
+
+    # THEN result is correct
+    assert result == 1033
 
