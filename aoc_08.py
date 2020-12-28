@@ -1,5 +1,4 @@
 import data
-from time import sleep
 
 
 def part_one(filename: str):
